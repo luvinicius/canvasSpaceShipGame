@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas Invaders</title>
+	</head>
+
+	<boby>
+		
+		<canvas id="game" width="860" height="860" style="display:block;margin-left:auto; margin-right:auto;"></canvas>
+		<div style="margin-top:1em;text-align:center;">
+			<button onclick="CanvasInvadersEngine.game.start(); this.style.display='none';">Start</button>
+			<button onclick="CanvasInvadersEngine.game.pause();">Pause</button>
+			<button onclick="CanvasInvadersEngine.game.resume();">Resume</button>
+		</div>
+		<!--<script type="text/javascript" src="canvasInvaders.js" />	-->
+		<script type="text/javascript">
+			class Teste{
+				return "eu sou um teste";
+			}
+
+			var a = new Teste();
+			console.log(a);
+			if(a == "eu sou um teste"){
+				console.log("'"+a+"' é um teste");
+			}else{
+				console.log("'"+a+"' NÃO é um teste");
+			}
+
+			/*var per = new CanvasInvadersEngine.Perimeter("coisa")
+							.path(430,430)
+							.to(630, 430, CanvasInvadersEngine.Math.DIRECTIONS.UP)
+							.to(630, 630, CanvasInvadersEngine.Math.DIRECTIONS.RIGHT)
+							.to(430, 630, CanvasInvadersEngine.Math.DIRECTIONS.DOWN)
+							.to(430, 430, CanvasInvadersEngine.Math.DIRECTIONS.LEFT)
+							.end();
+			console.log(per);
+
+			CanvasInvadersEngine = {};
+			CanvasInvadersEngine.Math = {
+				DIRECTIONS : {
+					RIGHT: 0,
+					RIGHT_DOWN:45,
+					DOWN : 90,
+					LEFT_UP:135,
+					LEFT: 180,
+					LEFT_UP:225,
+					UP: 270,
+					RIGHT_UP:315
+				},
+				getPoint : function(centerX, centerY, degree, radius){
+					return {	x : centerX + (radius * Math.cos(degree * Math.PI/180)),
+								y : centerY + (radius * Math.sin(degree * Math.PI/180))		};
+				}
+			};
+			CanvasInvadersEngine.getContext = function(){
+				return document.getElementById("game").getContext("2d");
+			}
+
+			CanvasInvadersEngine.Point = class Point{
+				static get STATUS(){
+					return {	A:0,
+								B:1,
+								C:2		};
+				}
+
+				constructor(x,y, name){
+					this.x = x;
+					this.y = y;
+					this.name = name;
+					this.state = this.STATUS.A;
+				}
+
+				get className(){
+					return this.constructor.name;
+				}
+				get engine(){
+					return CanvasInvadersEngine;
+				}
+				get class(){
+					return this.engine[this.className];
+				}
+				get STATUS(){
+					return this.class.STATUS;
+				}
+				get DIRECTIONS(){
+					return this.engine.Math.DIRECTIONS;
+				}
+
+				getPoint(degree, distance){
+					return this.engine.Math.getPoint(this.x, this.y, degree, distance);
+				}
+
+				move(distance, degree = this.DIRECTIONS.UP){
+					let coord = this.getPoint(degree, distance);
+					this.x = coord.x;
+					this.y = coord.y;
+				}
+				
+				draw(){
+					var ctx = CanvasInvadersEngine.getContext();
+					ctx.fillStyle = "#FF0000";
+					ctx.beginPath();
+					ctx.arc(this.x, this.y, 48, 0, 2 * Math.PI);
+					ctx.fill();
+					ctx.closePath();
+					ctx.fillStyle = "#FFFFFF";
+					ctx.font = "18px Arial";
+					ctx.textAlign = "center";
+					ctx.fillText(this.name, this.x, this.y-4);
+					ctx.font = "10x Arial";
+					ctx.fillText("("+Math.round(this.x)+","+Math.round(this.y)+")", this.x , this.y+12);
+				}
+
+			};
+			var p1 = new CanvasInvadersEngine.Point(430,430,"A");
+			p1.draw();
+			p1.name = "B";
+			p1.move(148, p1.DIRECTIONS.UP);
+			p1.draw();
+			p1.name = "C";
+			p1.move(200, p1.DIRECTIONS.RIGHT);
+			p1.draw();
+			p1.name = "D";
+			p1.move(296, p1.DIRECTIONS.DOWN);
+			p1.draw();
+			p1.name = "E";
+			p1.move(200, p1.DIRECTIONS.LEFT);
+			p1.draw();*/
+		</script>
+	</body>
+</html>
